@@ -11,8 +11,7 @@ RUN apt-get update && \
             python3-pip \
             build-essential\
         && \
-        pip3 wheel --no-deps natcap.invest && \
-        cp dist/*.whl /tmp
+        pip3 wheel --no-deps --wheel-dir=/tmp/ natcap.invest
 
 
 FROM debian:trixie
